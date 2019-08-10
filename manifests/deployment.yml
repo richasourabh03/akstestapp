@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: richasourabhakstestapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: richasourabhakstestapp 
+    spec:
+      containers:
+        - name: richasourabhakstestapp 
+          image: containerregistrycicd.azurecr.io/richasourabhakstestapp 
+          ports:
+          - containerPort: 80
